@@ -11,7 +11,7 @@ export class AppComponent {
 
   onClick() {
     this.showParagraph = !this.showParagraph;
-    this.clicks.push(this.clicks.length + 1);
+    this.clicks.push(new Date());
   }
 
 }

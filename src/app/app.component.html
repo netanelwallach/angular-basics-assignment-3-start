@@ -15,8 +15,8 @@
 
       <button type="button" class="btn btn-primary" (click)="onClick()">Display Details</button>
       <p *ngIf="showParagraph">Secret Password = tuna</p>
-      <div *ngFor="let click of clicks" [ngStyle]="{backgroundColor: click >= 5 ? 'blue' : 'white'}"
-        [ngClass]="{fifthPlus: click >= 5 }">Button was clicked {{click}} times
+      <div *ngFor="let click of clicks; let i = index" [ngStyle]="{backgroundColor: i >= 4 ? 'blue' : 'white'}"
+        [ngClass]="{fifthPlus: i >= 4 }">Button was clicked {{i}} times, created at {{ click}}
       </div>
 
     </div>
